@@ -1,0 +1,22 @@
+{
+	"pluginName": "Large Type",
+	"description": "Large Type 使你可以在屏幕上显示放大的文本",
+	"author": "angboo",
+	"homepage": "https://github.com/angboo/",
+	"preload": "preload.js",
+	"version": "1.0.0",
+	"logo": "icon.png",
+	"features": [
+		{
+			"code": "large-type",
+			"cmds": [
+				{
+					"type": "over",
+					"label": "Large Type",
+					"minLength": 1,
+					"maxLength": 50
+				}
+			]
+		}
+	]
+}

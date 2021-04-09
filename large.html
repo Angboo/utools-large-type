@@ -1,0 +1,37 @@
+<html>
+<style>
+    body {
+        -moz-user-select: none;
+        /*火狐*/
+        -webkit-user-select: none;
+        /*webkit浏览器*/
+        -ms-user-select: none;
+        /*IE10*/
+        -khtml-user-select: none;
+        /*早期浏览器*/
+        user-select: none;
+    }
+
+    #content {
+        color: white;
+        text-align: center;
+        font-size: 100px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <div id="content"></div>
+</body>
+<script>
+    const key = 'content';
+    const content = localStorage[key];
+    localStorage.removeItem(key);
+    document.getElementById(key).innerText = content;
+    document.addEventListener("mousedown", event => {
+        window.close();
+    });
+</script>
+
+</html>
