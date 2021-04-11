@@ -27,11 +27,11 @@
 <script>
     const key = 'content';
     const content = localStorage[key];
+    const closePage = event => window.close();
     localStorage.removeItem(key);
     document.getElementById(key).innerText = content;
-    document.addEventListener("mousedown", event => {
-        window.close();
-    });
+    document.addEventListener("keydown", closePage)
+    document.addEventListener("mousedown", closePage);
 </script>
 
 </html>
